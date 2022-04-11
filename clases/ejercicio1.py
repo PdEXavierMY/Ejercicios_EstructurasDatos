@@ -46,6 +46,6 @@ bucle = MientrasQue(True, bloque_alternativa)
 while bucle.condicion:
     bloqueif = bloque_alternativa.instrucciones[0]
     if bloqueif.condicion:
-        bloqueif.entonces
+        print(bloqueif.entonces.mensaje)
     else:
-        bloqueif.si_no
+        print(bloqueif.si_no.mensaje)
