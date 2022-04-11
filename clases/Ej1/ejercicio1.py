@@ -43,9 +43,12 @@ bloque_alternativa.agregarInstruction(alternativa)
 bucle = MientrasQue(True, bloque_alternativa)
 
 #programa visitante(para no tener que abrir un archivo nuevo):
+bloqueif = bloque_alternativa.instrucciones[0]
 while bucle.condicion:
-    bloqueif = bloque_alternativa.instrucciones[0]
     if bloqueif.condicion:
         print(bloqueif.entonces.mensaje)
     else:
         print(bloqueif.si_no.mensaje)
+    break
+for a in bloqueif.condicion:
+    print(a)
