@@ -39,5 +39,13 @@ mostrar_ok = Mostrar('"OK"')
 mostrar_ko = Mostrar('"KO"') 
 alternativa = Si("2 + 2 == 4", mostrar_ok, mostrar_ko) 
 bloque_alternativa = Bloque() 
-bloque_alternativa.agregarInstruccion(alternativa) 
+bloque_alternativa.agregarInstruction(alternativa) 
 bucle = MientrasQue(True, bloque_alternativa)
+
+#programa visitante(para no tener que abrir un archivo nuevo):
+while bucle.condicion:
+    bloqueif = bloque_alternativa.instrucciones[0]
+    if bloqueif.condicion:
+        bloqueif.entonces
+    else:
+        bloqueif.si_no
