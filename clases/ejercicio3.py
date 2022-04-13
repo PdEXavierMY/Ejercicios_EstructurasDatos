@@ -12,12 +12,15 @@ class Naturaleza:
     SERVICIO = 0.2
     ALIMENTARIA = 0.055
 class FactoryFactura:
-    def crear(tipo_producto):
-        if tipo_producto == 0.2 or 0.05:
-            precio = 100
-            return precio
-        else:
-            print("El programa solo factura productos alimentarios o servicios")
+    class crear():
+        def __init__(self, tipo_producto):
+            self.tipo_producto = tipo_producto
+        def facturar(self):
+            if self.tipo_producto == 0.2 or 0.05:
+                self.precio = 100
+                return self.precio*self.tipo_producto
+            else:
+                print("El programa solo factura productos alimentarios o servicios")
 def Producto(iva):
     return iva
 
