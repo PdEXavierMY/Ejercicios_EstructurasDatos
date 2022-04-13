@@ -1,8 +1,9 @@
+from introducir.cadena import solicitar_introducir_cadena
 
 archivo = open("Mayúsculas.txt", 'w', encoding='utf-8')
 archivo.write("")
 archivo.close()
-__texto = input("Introduce un texto") #entrada éstandar. Digamos que una línea vale 100 caracteres.
+__texto = solicitar_introducir_cadena("Introduce un texto") #entrada éstandar. Digamos que una línea vale 100 caracteres.
 __caracteres = list(__texto)
 archivo = open("Mayúsculas.txt", 'a', encoding='utf-8')
 for j in range(2):
