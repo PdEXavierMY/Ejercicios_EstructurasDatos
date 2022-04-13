@@ -18,9 +18,9 @@ class FactoryFactura:
         def facturar(self):
             if self.tipo_producto == 0.2 or 0.05:
                 self.precio = 100
-                return self.precio*self.tipo_producto
+                return self.precio+(self.precio*self.tipo_producto)
             else:
-                print("El programa solo factura productos alimentarios o servicios")
+                print("El programa solo factura productos alimentarios o servicios.")
 def Producto(iva):
     return iva
 

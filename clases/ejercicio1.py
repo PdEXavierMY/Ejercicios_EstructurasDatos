@@ -50,4 +50,4 @@ def visitante():
             print(bloqueif.entonces.mensaje)
         else:
             print(bloqueif.si_no.mensaje)
-        break
+        break #el bucleo sería infinto y la terminal acabaría bloqueada de no meter este break.
