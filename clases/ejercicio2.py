@@ -7,11 +7,14 @@ archivo = open("Mayúsculas.txt", 'a', encoding='utf-8')
 n=1
 while n<3:
     if len(__caracteres) < 101:
-        archivo.write(__texto)
+        archivo.write(str(__texto)+"\n")
         break
     else:
-        for i in range(101):
-            letra = __caracteres[i].pop()
-            archivo.write(letra)  
+        for i in range(100):
+            letra = __caracteres[i]
+            archivo.write(letra)
+        archivo.write("\n")
+        for i in range(100):
+            __caracteres.pop(0)
     n+=1    
 archivo.close()
