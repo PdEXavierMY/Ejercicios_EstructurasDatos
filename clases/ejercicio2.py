@@ -1,6 +1,3 @@
-from distutils import archive_util
+archivo = open("Mayúsculas.txt", 'w', encoding='utf-8')
 
-
-archivo = open("Mayúsculas.txt", 'w')
-archivo.write("Adiós")
 archivo.close()
