@@ -1,20 +1,21 @@
 
 archivo = open("Mayúsculas.txt", 'w', encoding='utf-8')
+archivo.write("")
 archivo.close()
 __texto = input("Introduce un texto") #entrada éstandar. Digamos que una línea vale 100 caracteres.
 __caracteres = list(__texto)
 archivo = open("Mayúsculas.txt", 'a', encoding='utf-8')
-n=1
-while n<3:
+for j in range(2):
     if len(__caracteres) < 101:
-        archivo.write(str(__texto)+"\n")
+        archivo.write(str(__texto))
         break
     else:
         for i in range(100):
             letra = __caracteres[i]
-            archivo.write(letra)
-        archivo.write("\n")
+            if i == 99:
+                archivo.write(str(letra)+"\n")
+            else:
+                archivo.write(letra)
         for i in range(100):
-            __caracteres.pop(0)
-    n+=1    
+            __caracteres.pop(0) 
 archivo.close()
