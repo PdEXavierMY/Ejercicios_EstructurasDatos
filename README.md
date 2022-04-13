@@ -73,7 +73,7 @@ def visitante():
 El UML es el siguiente:
 
 <br>
-<img height="250" src="UML/Ejercicio1.jpg" />
+<img height="170" src="UML/Ejercicio1.jpg" />
 <br>
 
 ## Ejercicio 2<a name="id2"></a>
@@ -154,5 +154,5 @@ print(precio_neto)
 El UML es el siguiente:
 
 <br>
-<img height="250" src="UML/Ejercicio3.jpg" />
+<img height="200" src="UML/Ejercicio3.jpg" />
 <br>
