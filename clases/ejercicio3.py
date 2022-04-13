@@ -20,3 +20,11 @@ class FactoryFactura:
             print("El programa solo factura productos alimentarios o servicios")
 def Producto(iva):
     return iva
+
+producto = Producto(Naturaleza.ALIMENTARIA)
+precio_neto = FactoryFactura.crear(producto).facturar()
+print(precio_neto)
+
+producto = Producto(Naturaleza.SERVICIO)
+precio_neto = FactoryFactura.crear(producto).facturar()
+print(precio_neto)
