@@ -1,6 +1,20 @@
-import sys
-sys.path.insert(1, './introducir')
-from introducir import solicitar_introducir_cadena
+def solicitar_introducir_cadena(invite): #no soy capaz de importear, seguiré intentando
+    """
+    Esta función verifica que hay un dato introducido
+    de al menos un carácter
+    """
+    while True:
+        # Entramos en un bucle infinito
+
+        # Pedimos introducir un número
+        print(invite, end=": ")
+        datoIntroducido = input()
+
+        if len(datoIntroducido) > 0:
+            # Tenemos lo que queremos, salimos del bucle saliendo de la función
+            return datoIntroducido
+        else:
+            print("¡¡La cadena introducida debe tener al menos 1 elemento!!")
 
 def doslineas():
     archivo = open("Mayúsculas.txt", 'w', encoding='utf-8')
