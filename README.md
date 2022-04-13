@@ -70,7 +70,11 @@ def visitante():
             print(bloqueif.si_no.mensaje)
         break #el bucleo sería infinto y la terminal acabaría bloqueada de no meter este break.
 ```
+El UML es el siguiente:
 
+<br>
+<img height="250" src="UML/Ejercicio1.jpg" />
+<br>
 
 ## Ejercicio 2<a name="id2"></a>
 
@@ -104,15 +108,6 @@ def doslineas():
                 __caracteres.pop(0) 
     archivo.close()
 ```
-Pregunta adicional: ¿por qué se muestra RADAR después de la instanciación Palindromo("sonar")?
-La respuesta es porque RADAR es un palindromo, mientras que SONAR no, así que probablemente cuando la instancia es un palindromo no la destruye, sino que espera a la siguiente instancia para ello, mientras que si no es un palindromo es probable que inmediatamente la destruya. Como al destruir, el codigo muestra el dato, eso explica por qué RADAR se muestra despues de instanciar SONAR.
-
-El UML es el siguiente:
-
-<br>
-<img height="250" src="UML/Palindromos.jpg" />
-<br>
-
 
 ## Ejercicio 3<a name="id3"></a>
 
@@ -156,3 +151,8 @@ precio_neto = FactoryFactura.crear(producto).facturar()
 print(precio_neto)
 
 ```
+El UML es el siguiente:
+
+<br>
+<img height="250" src="UML/Ejercicio3.jpg" />
+<br>
