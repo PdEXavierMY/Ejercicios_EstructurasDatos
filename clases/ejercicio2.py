@@ -11,11 +11,11 @@ class Vista:
         archivo = open("Mayúsculas.txt", 'w', encoding='utf-8')
         archivo.write("")
         archivo.close()
-        __caracteres = list(self.modelo)
+        __caracteres = list(self.modelo.texto)
         archivo = open("Mayúsculas.txt", 'a', encoding='utf-8')
         for j in range(2):
             if len(__caracteres) < 101:
-                archivo.write(str(self.modelo).upper())
+                archivo.write(str(self.modelo.texto).upper())
                 break
             else:
                 for i in range(100):
@@ -29,10 +29,7 @@ class Vista:
         archivo.close()
 class Controlador:
     def __init__(self):
-        self.vista = Vista
+        self.vista = Vista()
     
     def conseguirtexto(self):
         self.vista.doslineas()
-
-iniciar = Controlador
-iniciar.conseguirtexto()
