@@ -3,5 +3,5 @@ from .ejercicio1 import (
 )
 
 from .ejercicio2 import (
-    doslineas
+    Controlador
 )
