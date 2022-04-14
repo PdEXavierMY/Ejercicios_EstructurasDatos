@@ -78,7 +78,7 @@ El UML es el siguiente:
 
 ## Ejercicio 2<a name="id2"></a>
 
-En este ejercicio he creado una función que recoge un texto escrito por el usuario(lo que sería la entrada estándar) con sus atributos principales encapsulados. La función separa el texto introducido en caracteres y recoge y almacena en un documento txt las dos primeras líneas(se asume que una línea son 100 caracteres).
+En este ejercicio he creado una función que recoge un texto escrito por el usuario(lo que sería la entrada estándar). La función separa el texto introducido en caracteres y recoge y almacena en un documento txt las dos primeras líneas según el método MVC(se asume que una línea son 100 caracteres).
 
 
 El código empleado para resolverlo es el siguiente:
@@ -86,27 +86,39 @@ El código empleado para resolverlo es el siguiente:
  ```python
 from introducir.cadena import solicitar_introducir_cadena
 
-def doslineas():
-    archivo = open("Mayúsculas.txt", 'w', encoding='utf-8')
-    archivo.write("")
-    archivo.close()
-    __texto = solicitar_introducir_cadena("Introduce un texto") #entrada éstandar. Digamos que una línea vale 100 caracteres.
-    __caracteres = list(__texto)
-    archivo = open("Mayúsculas.txt", 'a', encoding='utf-8')
-    for j in range(2):
-        if len(__caracteres) < 101:
-            archivo.write(str(__texto))
-            break
-        else:
-            for i in range(100):
-                letra = __caracteres[i]
-                if i == 99:
-                    archivo.write(str(letra)+"\n")
-                else:
-                    archivo.write(letra)
-            for k in range(100):
-                __caracteres.pop(0) 
-    archivo.close()
+class Modelo:
+    def __init__(self, texto):
+        self.texto = texto
+class Vista:
+    def __init__(self):
+        self.modelo = Modelo(solicitar_introducir_cadena("Introduce un texto") #entrada éstandar. Digamos que una línea vale 100 caracteres.
+)
+    def doslineas(self):
+        archivo = open("Mayúsculas.txt", 'w', encoding='utf-8')
+        archivo.write("")
+        archivo.close()
+        __caracteres = list(self.modelo.texto)
+        archivo = open("Mayúsculas.txt", 'a', encoding='utf-8')
+        for j in range(2):
+            if len(__caracteres) < 101:
+                archivo.write(str(self.modelo.texto).upper())
+                break
+            else:
+                for i in range(100):
+                    letra = __caracteres[i]
+                    if i == 99:
+                        archivo.write(str(letra).upper()+"\n")
+                    else:
+                        archivo.write(letra.upper())
+                for k in range(100):
+                    __caracteres.pop(0) 
+        archivo.close()
+class Controlador:
+    def __init__(self):
+        self.vista = Vista()
+    
+    def conseguirtexto(self):
+        self.vista.doslineas()
 ```
 
 ## Ejercicio 3<a name="id3"></a>
