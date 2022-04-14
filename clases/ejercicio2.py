@@ -29,7 +29,10 @@ class Vista:
         archivo.close()
 class Controlador:
     def __init__(self):
-        self.vista = Vista()
+        self.vista = Vista
     
     def conseguirtexto(self):
         self.vista.doslineas()
+
+iniciar = Controlador
+iniciar.conseguirtexto()

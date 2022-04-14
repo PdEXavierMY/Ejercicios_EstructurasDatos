@@ -1,4 +1,3 @@
-from clases.ejercicio2 import Controlador
 from introducir import solicitar_introducir_numero_extremo
 from clases import *
 
@@ -7,6 +6,6 @@ if __name__ == '__main__':
     if ejercicio == 1:
         visitante()
     elif ejercicio == 2:
-        Controlador.conseguirtexto()
+        from clases import ejercicio2
     elif ejercicio ==3:
         from clases import ejercicio3
